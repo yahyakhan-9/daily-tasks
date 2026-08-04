@@ -1,0 +1,72 @@
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+ #portfolio {
+    text-align: center;
+    font-size: 30px;
+}
+
+
+#built {
+    
+    text-align: center;
+}
+
+#div1 {
+    margin-bottom: 30px;
+}
+
+#div2 {
+
+     background-color:rgb(21, 21, 27) ;
+    
+}
+
+#navb {
+    display: flex;
+    justify-content: center;
+}
+#navb b {
+    color: rgb(49, 49, 197);
+    padding: 10px;
+   
+    
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(4, 4, 22);
+    color: white;
+}
+
+#section {
+    display: flex;
+    margin-top: 10px;
+}
+
+#left {
+   
+    width: 65%;
+    
+
+}
+#right {
+    
+    width: 35%;
+   
+   margin-left: 30px;
+}
+
+#foot {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(12, 12, 19) ;
+    color: white;
+}
+    

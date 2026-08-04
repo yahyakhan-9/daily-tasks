@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="day11.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Day 11: css Selectors Demonstration </h1>
+    <br>
+    <h3>Task 1: Button Classes & Modifires</h3>
+    <hr>
+
+
+    <button class="btn">Defult Blue (.btn)</button>
+    <button class="btn btn-red">Red Button (.btn.btn-red)</button>
+    <button  class="btn btn-green">Green Button (.btn.btn-green)</button>
+    <br>
+   <h3>Task 2; Zebra Table With :nth-child (even)</h3>
+   <hr>
+
+   <table border="2" id="tab">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Item</th>
+        <th>Status</th>
+    </tr>
+    </thead >
+    <tbody>
+         <tr>
+        <td>1</td>
+        <td>HTML5 Skeleton</td>
+        <td>Completed</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>CSS Skeleton</td>
+        <td>Inprogram</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Flexbox Layout</td>
+        <td>Upcoming</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>CSS Grid</td>
+        <td>Upcoming</td>
+    </tr>
+    </tbody>
+
+   
+   </table>
+   
+   <h3>Task 3: Styled Navigation Bar</h3>
+   <hr>
+
+   <header>
+    <nav>
+        <ul>
+            <li> <a href="/">Home</a></li>
+            <li> <a href="/">About</a></li>
+            <li> <a href="/">Service</a></li>
+            <li> <a href="/">Contact</a></li>
+            
+        </ul>
+    </nav>
+   </header>
+
+   <h3>Task 4: Specificity Race Test</h3>
+   <hr>
+
+   <p class="first" id="second" > p vs class vs id 
+    <br> Winner = id = green
+   </p>
+</body>
+</html>

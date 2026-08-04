@@ -1,0 +1,31 @@
+
+body {
+    background-color: burlywood;
+}
+
+
+h2 {
+    color: blue;
+}
+
+
+form {
+    background-color: rgb(155, 155, 97);
+}
+
+table {
+    background-color: chocolate;
+}
+
+#skill {
+    background-color: aqua;
+}
+
+#about {
+    background-color: brown;
+}
+
+footer {
+    background-color: rgb(228, 117, 13);
+    text-align: center;
+}

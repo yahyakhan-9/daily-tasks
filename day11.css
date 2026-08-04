@@ -1,0 +1,71 @@
+
+.btn {
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      padding: 3px 8px;
+      border: none;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+.btn-green {
+    background-color: green;
+}
+
+table {
+    height: 150px;
+    width: 400px;
+}
+thead {
+    color: white;
+    background-color: rgb(5, 1, 1);
+}
+
+tr:nth-child(even){
+    background-color: rgba(128, 128, 128, 0.438);
+}
+
+
+nav {
+    background-color: rgba(0, 0, 0, 0.979);
+    padding: 3px 8px ;
+    border-radius: 5px;
+
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 5px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;   
+}
+
+.first {
+    color: blue;
+}
+
+#second {
+    color: green;
+}
+p {
+    color: red;
+    text-align: center;
+    font-size: large;
+}
+
+
+
+
