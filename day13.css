@@ -63,12 +63,13 @@ hr {
     }
 
     nav {
-        background-color: rgb(177, 14, 14);
+        background-color: rgb(12, 12, 12);
         color: white;
-        border-radius: 3px;
+        border-radius: 5px;
         display: flex;
         justify-content: center;
         text-align: center;
+        margin-top: 5px;
     }
 
     nav ul {
