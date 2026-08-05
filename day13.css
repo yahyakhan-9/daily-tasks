@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body {
+    background-color: rgba(231, 208, 208, 0.623);
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+
+}
+
+hr {
+    border: 0.2px rgba(0, 0, 0, 0.63) dashed;
+    
+}
+
+.sone {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+}
+
+.two {
+    font-style: italic;
+    font-size: large;
+    text-transform: small uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+
+/* Card Wrapper for each Task */
+    .task-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .task-header {
+      font-size: 1.25rem;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
+    /* Question Box */
+    .task-question {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .task3 *{
+      margin:8px 0;
+      
+    }
+
+    nav {
+        background-color: rgb(177, 14, 14);
+        color: white;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 8px;
+ }
+
+   nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    
+   }
+
+   nav ul li a:hover{
+    text-decoration: underline #1e40af  ;
+    color: #1e40af;
+   }
