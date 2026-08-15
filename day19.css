@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.task-card {
+    background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 35px;
+      margin-left: 25px;
+      margin-right: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.116);
+      border: 5px solid #282a2c1a;
+}
+
+.task-header {
+      font-size: 1.25rem;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
+    /* Question Box */
+    .task-question {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+
+
+     nav  {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        justify-content: space-between;
+        margin: 5px;
+        border-radius: 5px;
+        
+        align-items: center;
+        padding: 0 20px;
+    
+        
+
+       
+      
+     }
+
+     nav div ul  {
+        display: flex;
+      
+        justify-content: flex-end;
+        
+        
+      
+
+       
+     }
+
+     nav div ul a {
+        color: white;
+        text-decoration: none;
+        padding: 3px 10px;
+        
+        
+     }
+
+
+
+
+
+     nav div ul li {
+        text-decoration: none;
+        font-style: normal;
+        list-style: none;
+        padding: 5px;
+        font-weight: 300;
+        font-family: sans-serif;
+        
+        
+        
+        
+      
+
+
+     }
+
+     #stu {
+        padding: 5px;
+        margin-top: 5px;
+        font-weight: 300;
+     }
+
+
+
+     .li-all {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        margin: 10px 5px;
+        justify-content: space-between;
+        background-color:#2f3542 ;
+        padding: 20px 5px;
+        color: white;
+        border-radius: 5px;
+        
+     }
+
+     .li-all a {
+        color: white;
+        font-weight: 800;
+        font-size: larger;
+        text-decoration: none;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        display: block;
+       
+     }
+
+     .sam {
+        position: absolute;
+        background-color:red;
+       
+     }
+
+      .li-all p {
+         display: block;
+       margin-left: 20px;
+       color: rgba(255, 255, 255, 0.438);
+      }
+
+     .li-all samp {
+        display: block;
+       margin-left: 20px;
+       margin-bottom: 5px;
+       color: rgba(255, 255, 255, 0.438);
+     }
+
+
+     #about {
+        width: 400px;
+        height: 200px;
+
+       
+       
+     }
+
+     #quick{
+        display: flex;
+        flex-direction: column;
+         width: 400px;
+        height: 200px;
+       
+        
+
+     }
+
+     #meadia {
+        display: flex;
+         flex-direction: column;
+          width: 400px;
+        height: 200px;
+        
+
+     }
+
+     .all-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px;
+        padding-left: 40px;
+        
+     }
+
+
+     .card {
+        width: 30%;
+        height: 120px;
+        background-color: #d1ccc0;
+        border-radius: 5px;
+        border: 1px dashed gray;
+        
+     }
+
+     .card h3 {
+        margin-top: 10px;
+        margin-left: 10px;
+        
+        
+     }
+
+     .card p {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+     }
+
+
+     .card a {
+        margin: 10px;
+        padding: 5px;
+        text-decoration: none;
+        font-family: arial, sans-serif;
+       border-radius: 40px;
+        color: rgb(13, 13, 73);
+        background-color: #34ace06c;font-size: small;
+
+     }
+
+    
+     .all-side {
+     
+     display: flex;
+     justify-content: baseline;
+     }
+
+     .all-side label {
+      background-color: rgba(0, 0, 0, 0.568);
+     border: 2px dashed rgba(0, 0, 0, 0.445);
+     border-radius: 5px;
+     box-shadow: 0px 0px 5px black;
+      width: 400px;
+      height: 200px;
+      margin: 10px;
+
+     }
+     .all-side label h3 {
+      color: white;
+      font-family: sans-serif;
+      font-weight: 800;
+      
+      font-style: italic;
+      padding: 10px;
+     }
+
+     .all-side label ul {
+      list-style: none;
+      padding: 10px;
+      
+      
+     }
+     
+     .all-side label ul  li {
+      padding: 5px;
+     
+     }
+     .all-side label ul  li a {
+      color: rgba(245, 222, 179, 0.39) ;
+      transition: 0.5s ease-in;
+      
+     
+     }
+
+     .all-side div  {
+      background-color: rgba(170, 153, 153, 0.37);
+      border: 1px dashed rgba(170, 153, 153, 0.37);
+      box-shadow: 0px 0px 5px gray;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 5px;
+     }
+
+     .all-side div h3 {
+      padding: 5px;
+      margin: 5px;
+      font-size: larger;
+      font-weight: 800;
+      font-family: sans-serif;
+      margin-left: 20px;
+     }
+     .all-side div p {
+      padding: 5px;
+      margin: 5px;
+      font-size: small;
+      color: rgba(100, 93, 93, 0.493);
+     }
+
