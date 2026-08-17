@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 20 - CSS Grid Part 1: Two-Dimensional Layouts</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+    /* ========================================================
+       GLOBAL RESET & BASE STYLES
+       ======================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: #f1f5f9;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Poppins', sans-serif;
+      color: #0f172a;
+    }
+
+    .main-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    .main-subtitle {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    /* Container pattern for fluid layout */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.25rem 0;
+    }
+
+    /* ========================================================
+       INSTRUCTIONS CARD STYLES
+       ======================================================== */
+    .instructions-card {
+      background-color: #eff6ff;
+      border: 2px solid #bfdbfe;
+      border-radius: 0.625rem;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .instructions-card h2 {
+      color: #1e40af;
+      font-size: 1.2rem;
+      margin-bottom: 0.625rem;
+    }
+
+    .instructions-card ol {
+      margin-left: 1.25rem;
+      color: #1e3a8a;
+    }
+
+    .instructions-card li {
+      margin-bottom: 0.375rem;
+    }
+
+    /* ========================================================
+       COMMON TASK CARD LAYOUT
+       ======================================================== */
+    .task-card {
+      background-color: #ffffff;
+      border-radius: 0.625rem;
+      padding: 1.5rem;
+      margin-bottom: 2.25rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .task-header {
+      font-size: 1.25rem;
+      color: #2563eb;
+      margin-bottom: 0.5rem;
+    }
+
+    .task-question {
+      background-color: #f8fafc;
+      border-left: 4px solid #2563eb;
+      padding: 0.625rem 0.875rem;
+      font-style: italic;
+      color: #475569;
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .preview-divider {
+      margin: 1.25rem 0;
+      border: 0;
+      border-top: 1px dashed #cbd5e1;
+    }
+
+    /* ========================================================
+       TASKS 1 & 2 STYLES: Photo Gallery & 2x2 Spanning Feature
+       ======================================================== */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3 equal fractional columns */
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #cbd5e1;
+      min-height: 180px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Task 2: Featured Item Spanning 2 columns & 2 rows */
+    .featured-item {
+      grid-column: span 2;
+      grid-row: span 2;
+      min-height: 376px;
+      /* Accounts for 2 height cells + gap */
+    }
+
+    .badge-featured {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: #ef4444;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+
+    /* ========================================================
+       TASK 3 STYLES: Responsive Magic (repeat auto-fit minmax)
+       ======================================================== */
+    .autofit-cards {
+      display: grid;
+      /* The magic responsive line: fit as many 250px min columns as possible */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .autofit-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .autofit-card h4 {
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+
+    .autofit-card p {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    /* ========================================================
+       TASK 4 STYLES: Stats Dashboard Grid
+       ======================================================== */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 equal columns on desktop */
+      gap: 16px;
+    }
+
+    .stat-card-small {
+      grid-column: span 1;
+      /* 1 column each -> total 4 in top row */
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2563eb;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .stat-card-small .stat-title {
+      font-size: 0.8rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .stat-card-small .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 0.25rem;
+    }
+
+    .stat-card-wide {
+      grid-column: span 2;
+      /* Occupies 2 columns -> 2 wide cards fill bottom row */
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .stat-card-wide h4 {
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .stat-card-wide p {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    /* Responsive adjustment for small screens */
+    @media (max-width: 640px) {
+      .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-card-wide {
+        grid-column: span 2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="main-title">DAY 20: CSS Grid Part 1 — Two-Dimensional Layout</h1>
+    <p class="main-subtitle">Arranging rows AND columns simultaneously using fr units, spanning, and minmax</p>
+
+    <!-- INSTRUCTIONS SECTION -->
+    <div class="instructions-card">
+      <h2>📋 How to Use &amp; Test This File</h2>
+      <ol>
+        <li><strong>Save the File:</strong> Save this code as <code>index.html</code> on your computer.</li>
+        <li><strong>Open in Browser:</strong> Double-click <code>index.html</code> to open it in Chrome, Firefox, or
+          Edge.</li>
+        <li><strong>Observe Tasks 1 &amp; 2:</strong> Check how <code>grid-column: span 2; grid-row: span 2;</code>
+          makes the first image expand seamlessly across a 2×2 block in the 3-column grid.</li>
+        <li><strong>Test Task 3 (Responsive MinMax):</strong> Resize your browser window horizontally. Watch how the
+          card columns automatically reflow and re-calculate column counts with zero media queries!</li>
+        <li><strong>Analyze Task 4 (Stats Dashboard):</strong> Notice how four small cards (spanning 1 column each) form
+          row 1, while two wide cards (spanning 2 columns each) cleanly form row 2.</li>
+      </ol>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TASKS 1 & 2: Photo Gallery + 2x2 Feature   -->
+    <!-- ========================================== -->
+    <div class="task-card">
+      <h2 class="task-header">Tasks 1 &amp; 2: 3×3 Photo Gallery with 2×2 Featured Image</h2>
+      <div class="task-question">
+        <strong>Question:</strong> Build a 3×3 photo gallery grid with Picsum images; make the first photo span 2×2 as a
+        featured image.
+      </div>
+      <hr class="preview-divider">
+
+      <!-- Live Design Preview -->
+      <div class="photo-gallery">
+        <!-- Task 2: Featured 2x2 Image -->
+        <div class="gallery-item featured-item">
+          <span class="badge-featured">FEATURED 2×2</span>
+          <img src="https://picsum.photos/id/1015/800/800" alt="Featured Landscape">
+        </div>
+
+        <!-- Remaining 5 gallery items completing the 3x3 layout space -->
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1018/400/400" alt="Mountain View">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1025/400/400" alt="Pug Dog">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1039/400/400" alt="Waterfall">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1043/400/400" alt="Forest Path">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1050/400/400" alt="Coastal View">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TASK 3: Auto-Fit MinMax Card Section       -->
+    <!-- ========================================== -->
+    <div class="task-card">
+      <h2 class="task-header">Task 3: Responsive One-Liner (auto-fit minmax)</h2>
+      <div class="task-question">
+        <strong>Question:</strong> Rebuild your card section with <code>repeat(auto-fit, minmax(250px, 1fr))</code>;
+        resize browser to observe.
+      </div>
+      <hr class="preview-divider">
+
+      <!-- Live Design Preview -->
+      <div class="autofit-cards">
+        <div class="autofit-card">
+          <h4>Card 1: Auto Fit</h4>
+          <p>Browser fits as many 250px minimum columns into the available row as space permits.</p>
+        </div>
+        <div class="autofit-card">
+          <h4>Card 2: Fluid Expansion</h4>
+          <p>When extra space remains, 1fr expands each card proportionally to fill the row.</p>
+        </div>
+        <div class="autofit-card">
+          <h4>Card 3: Auto Reflow</h4>
+          <p>On narrower viewports, cards automatically drop down to new lines without media queries.</p>
+        </div>
+        <div class="autofit-card">
+          <h4>Card 4: Zero Breakpoints</h4>
+          <p>This single line of CSS Grid replaces dozens of lines of repetitive screen query code.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TASK 4: Stats Dashboard Layout             -->
+    <!-- ========================================== -->
+    <div class="task-card">
+      <h2 class="task-header">Task 4: Stats Dashboard Grid</h2>
+      <div class="task-question">
+        <strong>Question:</strong> Make a stats dashboard: 4 small cards on the top row, 2 wide cards below.
+      </div>
+      <hr class="preview-divider">
+
+      <!-- Live Design Preview -->
+      <div class="dashboard-grid">
+        <!-- Top Row: 4 Small Cards (1 column span each) -->
+        <div class="stat-card-small">
+          <div class="stat-title">Total Revenue</div>
+          <div class="stat-value">$48,290</div>
+        </div>
+        <div class="stat-card-small">
+          <div class="stat-title">Active Users</div>
+          <div class="stat-value">3,420</div>
+        </div>
+        <div class="stat-card-small">
+          <div class="stat-title">New Signups</div>
+          <div class="stat-value">+612</div>
+        </div>
+        <div class="stat-card-small">
+          <div class="stat-title">Conversion Rate</div>
+          <div class="stat-value">4.8%</div>
+        </div>
+
+        <!-- Bottom Row: 2 Wide Cards (2 column spans each) -->
+        <div class="stat-card-wide">
+          <h4>📊 Revenue Growth Chart</h4>
+          <p>Detailed breakdown of monthly recurring revenue, active subscriptions, and customer retention metrics
+            across all active sales channels.</p>
+        </div>
+        <div class="stat-card-wide">
+          <h4>⚡ Traffic Sources Overview</h4>
+          <p>In-depth analytical overview displaying organic search queries, direct referral links, social media traffic
+            campaigns, and user drop-off points.</p>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End .container -->
+
+</body>
+
+</html>
