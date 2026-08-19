@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.task-card {
+    background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 35px;
+      margin-left: 25px;
+      margin-right: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.116);
+      border: 5px solid #282a2c1a;
+}
+
+.task-header {
+      font-size: 1.25rem;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
+    /* Question Box */
+    .task-question {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+
+
+    .ans-card {
+        padding: 20px;
+        
+        text-align: center;
+    }
+
+
+    .first-line {
+       font-family: sans-serif;
+    }
+
+    .first-line  h2 {
+      font-size: large;
+      font-weight: 800;
+      padding-bottom: 10px;
+    }
+
+    .first-line p {
+      font-size: small;
+      color: rgba(0, 0, 0, 0.623);
+      padding-bottom: 10px;
+    }
+
+    .date {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+      
+      width: 200px;
+      text-align: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .date p {
+        margin: 0;
+        padding: 0;
+        font-size: small;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+        
+        
+    }
+
+    #save {
+        color: rgba(4, 53, 4, 0.89);
+        background-color: rgba(59, 196, 59, 0.521);
+        width: 80px;
+        border-radius: 40px;
+        
+    }
+
+    .parrent-card {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       padding: 20px;
+       
+       gap: 16px;
+       text-align: center;
+
+    }
+
+
+    .card {
+        background-color: #ecf0f1;
+        border: 1px solid rgba(0, 0, 0, 0.37);
+        height: 330px;
+        padding: 0 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px ;
+        margin-top: 10px;
+    }
+
+     #card-b {
+        background-image: radial-gradient(#341f97,#5f27cd);
+        display: block;
+        height: 350px;
+        margin-top: -5px;
+        margin-bottom: -10px;
+        color: white;
+        position: relative;
+        box-shadow: 0 0 5px darkblue;
+    }
+
+    #popular {
+        position: absolute;
+        margin: -10px  auto;
+        font-family: sans-serif;
+        background-color:#fbc531;
+        padding: 3px 8px;
+        font-size: small;
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    #card-b h3 {
+        color: white;
+    }
+
+    #card-b h5 {
+        color: white;
+    }
+
+    #card-b h5 p {
+        color: white;
+    }
+
+    #card-b a {
+        background-color: white;
+        color: blue;
+    }
+
+    
+
+
+    .card h3 {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-family: sans-serif;
+        color: rgba(0, 0, 0, 0.658);
+    }
+
+
+    .card .dollor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-left: 45%;
+        
+        
+       
+       
+       
+    }
+
+
+    .card .dollor h1 {
+        
+        justify-content: end;
+        width: 20px;
+        font-family: sans-serif;
+        font-weight: 800;
+    }
+
+    .card .dollor h6 {
+        
+        display: flex;
+        align-items: center;
+        width: 30px;
+        margin-top: 20px;
+        
+        
+    }
+
+
+    .card h5 {
+        margin: 10px;
+        font-family: sans-serif;
+        font-size: small;
+        color: rgba(0, 0, 0, 0.568);
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+        
+        
+    }
+
+    .card h5 p {
+        color: black;
+    }
+
+    .card a {
+        display: block;
+        font-family: sans-serif;
+        font-size: small;
+        width: 180px;
+        margin: 35px auto;
+        text-decoration: none;
+        border: 1px solid rgba(0, 0, 0, 0.377);
+        padding: 5px;
+        border-radius: 20px;
+        color: black;
+        background-color: #ced6e06c;
+    }
+
+   
