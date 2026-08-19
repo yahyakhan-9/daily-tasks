@@ -93,11 +93,13 @@
     }
 
     .parrent-card {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       padding: 20px;
+        display: flex;
+        justify-content: center;
        
-       gap: 16px;
+       grid-template-columns: repeat(3, 1fr);
+       padding: px;
+       
+       gap:  16px;
        text-align: center;
 
     }
@@ -111,6 +113,7 @@
         border-radius: 10px;
         box-shadow: 0 0 5px ;
         margin-top: 10px;
+        width: 250px;
     }
 
      #card-b {
@@ -128,7 +131,7 @@
         position: absolute;
         margin: -10px  auto;
         font-family: sans-serif;
-        background-color:#fbc531;
+        background-color: #e1b12c;
         padding: 3px 8px;
         font-size: small;
         border-radius: 10px;
