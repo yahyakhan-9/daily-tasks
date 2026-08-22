@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.task-card {
+    background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 35px;
+      margin-left: 25px;
+      margin-right: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.116);
+      border: 5px solid #282a2c1a;
+}
+
+.task-header {
+      font-size: 1.25rem;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+
+    /* Question Box */
+    .task-question {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .accent-bar {
+      padding:  10px;
+    }
+
+    .accent-bar .h-2 {
+      font-family: sans-serif;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
+
+
+    .accent-bar .blue-line {
+      background-color: #1e40afc7;
+      height: 5px;
+      width: 65px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .accent-bar .information {
+      color: rgba(0, 0, 0, 0.849);
+      font-family: sans-serif;
+      padding-bottom: 25px;
+    }
+
+
+
+    .accent-bar .last-line {
+      display: flex;
+      gap: 7px;
+      
+      align-items: center;
+    }
+     .last-line a {
+      text-decoration: none;
+      font-family: sans-serif;
+      font-weight: 800;
+      color: black;
+     }
+
+
+     .last-line p {
+      background-color: rgb(194, 12, 12);
+      color: white;
+      font-family: sans-serif;
+      font-size: xx-small;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      padding: -3px auto;
+      border-radius: 5px;
+      height: 15px;
+      
+     }
+
+
+     .parrent-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      display: flex;
+      
+      text-align: center;
+
+     }
+
+
+     .card {
+      border: 1px solid rgba(0, 0, 0, 0.219);
+      border-radius: 5px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+      padding: 20px;
+      margin: 10px;
+     }
+
+
+     .card h3 {
+      font-family: sans-serif;
+      padding-bottom: 10px;
+     }
+
+     .card p {
+      padding-bottom: 10px;
+      font-family: sans-serif;
+      font-size: small;
+      color: rgba(0, 0, 0, 0.705);
+     }
+
+
+     nav {
+      background-color: black;
+      color: white;
+      display: flex;
+      font-family: sans-serif;
+      border-radius: 5px;
+      border: 1px dashed rgba(255, 255, 255, 0.76);
+      box-shadow: 0px 0px 5px black;
+     }
+
+     nav ul {
+      display: flex;
+      padding: 10px;
+     }
+
+     nav ul li {
+      padding-left: 5px;
+      list-style: none;
+      color: rgba(255, 255, 255, 0.685);
+      font-size: small;
+     }
+
+     nav ul li a {
+      color: white;
+      background-color: #092b75;
+      border: 1px solid rgba(0, 0, 0, 0.623);
+      padding: 5px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-right: 10px;
+     }
+
+
+     .last-card {
+      background-color: #bdc3c742;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.185);
+      font-family: sans-serif;
+      padding: 10px 20px;
+      border-left: 4px solid rgba(0, 0, 255, 0.726);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.658);
+     }
+
+     .last-card p {
+      font-style: italic;
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 0.9rem;
+      padding-bottom: 70px;
+     }
+
+     .last-card .finished-line a {
+           text-decoration: none;
+           color: black;
+           
+           display: flex;
+           justify-content: end;
+     }
+
+     .finished-line {
+      display: flex;
+      justify-content: end;
+     }
+
+
+      .last-blue-line {
+
+         background-color: rgba(0, 0, 139, 0.616);
+         height: 2px;
+         width: 15px;
+         border-radius: 5px;
+         margin-top: 6px;
+      }
+
+
+
